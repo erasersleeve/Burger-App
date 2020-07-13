@@ -1,0 +1,6 @@
+node_modules
+instructions.md
+node_modules/
+.env
+package-lock.json
+
