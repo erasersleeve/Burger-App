@@ -1,2 +1,2 @@
 -- Insert a set of records.
-INSERT INTO burgers (name) VALUES ('Beef Patty'),("Veggie Burger"),("Big Kahona Burger"),("French Fried Potatoes Burger"),("BBQ Bacon Thyme"),("Woodsman Burger");
+INSERT INTO burgers (burger_name, devoured) VALUES ('Beef Patty', 1),("Veggie Burger", 1),("Big Kahona Burger",1 ),("French Fried Potatoes Burger", 1),("BBQ Bacon Thyme",1 ),("Woodsman Burger", 1);
