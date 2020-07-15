@@ -1,5 +1,5 @@
 var mysql = require("mysql");
-var process = require("dotenv").config();
+require("dotenv").config();
 var keys = require("../process.js");
 
 
@@ -13,9 +13,9 @@ var keys = require("../process.js");
 
 var connection;
 if (process.env.JAWSDB_URL) {
-  mysql.createConnection(process.env.JAWSDB_URL);
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
-  mysql.createConnection({
+  connection = mysql.createConnection({
     // Your host
     host: keys.mysqlEnv.host_name,
     // Your port

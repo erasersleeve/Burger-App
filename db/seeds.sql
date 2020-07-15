@@ -2,6 +2,6 @@
 
 
 INSERT INTO burgers (burger_name) VALUES ('Beef Patty'),("Veggie Burger"),("Big Kahona Burger"),("French Fried Potatoes Burger"),("BBQ Bacon Thyme"),("Woodsman Burger");
-INSERT INTO burger (burger_name, devoured) VALUES ("pre-eaten burger", 1);
+INSERT INTO burgers (burger_name, devoured) VALUES ("pre-eaten burger", 1);
 
  
