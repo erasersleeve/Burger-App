@@ -21,7 +21,7 @@
       <ul>
         {{#each burgers}}
         {{#unless devoured}}
-        <li>
+        <li class="p-1">
           <p>
             {{this.burger_name}}
             {{!-- <button class="change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
@@ -41,7 +41,7 @@
         <li>
           <p>
             
-            <button class="btn change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
+            <button class="btn-sm change-devour"data-id="{{id}}" data-newdevour="{{devour}}">
               Devour This Burger!
             </button>
           </p>
@@ -55,7 +55,7 @@
       <ul>
         {{#each burgers}}
         {{#if devoured}}
-        <li>
+        <li class="p-1">
           <p>
             {{this.burger_name}}
 
