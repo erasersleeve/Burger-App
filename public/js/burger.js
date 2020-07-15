@@ -1,48 +1,6 @@
-<h1>Burger Time</h1>
-
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-  <li>
-    <p>
-      {{this.burger_name}}
-
-      
-      <button class="change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
-        Devour!
-	    </button>
-    </p>
-  </li>
-  {{/unless}}
-  {{/each}}
-</ul>
-
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-  <li>
-    <p>
-      {{this.burger_name}}
-
-    </p>
-  </li>
-  {{/if}}
-  {{/each}}
-</ul>
-
-
-<h2>Create a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="createburger" name="name">
-  </div>
-  <button type="submit">Create Burger</button>
-</form>
-
-<script>
-  $(".create-form").on("submit", function(event) {
+// Make sure we wait to attach our handlers until the DOM is fully loaded.
+$(function() {
+    $(".create-form").on("submit", function(event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
         var newBurger = {
@@ -80,5 +38,6 @@
           }
         );
       });
-</script>
-
+    
+  });
+  

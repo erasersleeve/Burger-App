@@ -1,6 +1,6 @@
 var express = require("express");
-const burgers = require("../models/burger.js");
-const burger = require("../models/burger.js");
+const burgers = require("../models/burgerModel.js");
+const burger = require("../models/burgerModel.js");
 var router = express.Router();
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -33,22 +33,24 @@ router.post("/api/burgers", function (req, res) {
   ], function(result) {
     res.json({ id: result.insertid})
   })
-})
+});
 
-// app.post("/api/burgers", function(req, res) {
-//     connection.query("", [req.body.burger], function(err, result) {
-//       if (err) {
-//         return res.status(500).end();
-//       }
-  
-//       // Send back the ID of the new plan useful for server logging/tracking inputs, could just use res.status(200).end(). As long as there is a res. to trigger the end of the post and trigger the then function in the index.
-//       res.json({ id: result.insertId });
-//       //could res.end. Just need a res to end the post. 
-//       console.log({ id: result.insertId });
-//     });
-//   });
+router.put("/api/burgers/:id", function(req, res) {
+  var condition = "id = " + req.params.id;
 
-// update/devour a plan
+  console.log("condition", condition);
+
+  burger.update({
+    devoured: req.body.devoured
+  }, condition, function(result) {
+    if (result.changedRows == 0) {
+      // If no rows were changed, then the ID must not exist, so 404
+      return res.status(404).end();
+    } else {
+      res.status(200).end();
+    }
+  });
+});
 
 // Export routes for server.js to use.
 module.exports = router;
