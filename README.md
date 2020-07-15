@@ -5,6 +5,7 @@
   ## Table of Contents
   *  [Installation](#Installation)
   *  [Usage](#Usage)
+  *  [Images](#Images)
   *  [License](#License)
   *  [Contributing](#Contributing)
   *  [Tests](#Tests)
@@ -16,6 +17,8 @@
 
   ## Usage
   Launch application from command line or follow deployed link
+  ## Images
+  ![1](https://github.com/erasersleeve/Burger-App/blob/master/Public/Assets/images/Capture%20d%E2%80%99%C3%A9cran%20(30).png?raw=true)
   ## License
   None
   ## Contributing
